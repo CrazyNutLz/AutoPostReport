@@ -1,0 +1,5 @@
+E:\玄机论坛\玄机类库\HttpCode\HttpCodeLib\HttpCodeLib\HttpCodeLib\bin\x86\Debug\HttpCodeLib.dll
+E:\玄机论坛\玄机类库\HttpCode\HttpCodeLib\HttpCodeLib\HttpCodeLib\bin\x86\Debug\HttpCodeLib.pdb
+E:\玄机论坛\玄机类库\HttpCode\HttpCodeLib\HttpCodeLib\HttpCodeLib\obj\x86\Debug\HttpCodeLib.dll
+E:\玄机论坛\玄机类库\HttpCode\HttpCodeLib\HttpCodeLib\HttpCodeLib\obj\x86\Debug\HttpCodeLib.pdb
+E:\玄机论坛\玄机类库\HttpCode\HttpCodeLib\HttpCodeLib\HttpCodeLib\obj\x86\Debug\HttpCodeLib.csprojResolveAssemblyReference.cache

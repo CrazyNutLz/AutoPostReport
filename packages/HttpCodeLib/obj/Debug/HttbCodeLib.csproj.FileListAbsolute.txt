@@ -1,0 +1,5 @@
+d:\Users\Administrator\Desktop\video\玄机网C#类库\HttpCode\HttbCodeLib\HttbCodeLib\bin\Debug\HttbCodeLib.dll
+d:\Users\Administrator\Desktop\video\玄机网C#类库\HttpCode\HttbCodeLib\HttbCodeLib\bin\Debug\HttbCodeLib.pdb
+d:\Users\Administrator\Desktop\video\玄机网C#类库\HttpCode\HttbCodeLib\HttbCodeLib\obj\Debug\HttbCodeLib.dll
+d:\Users\Administrator\Desktop\video\玄机网C#类库\HttpCode\HttbCodeLib\HttbCodeLib\obj\Debug\HttbCodeLib.pdb
+d:\Users\Administrator\Desktop\video\玄机网C#类库\HttpCode\HttbCodeLib\HttbCodeLib\obj\Debug\HttbCodeLib.csprojResolveAssemblyReference.cache
