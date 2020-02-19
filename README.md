@@ -12,7 +12,7 @@
 
 4.软件遇到Bug及时向我反馈，有能力的大佬可以自己更新 Thanks~
 
-5.软件直接下载链接：http://flyplayteam.fun/software/sicu/川师自动报平安.zip
+5.软件直接下载链接：http://flyplayteam.fun/software/sicnu/川师自动报平安.zip
 
 **更新日志**
 
