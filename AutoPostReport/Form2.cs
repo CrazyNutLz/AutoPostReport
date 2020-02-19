@@ -39,9 +39,8 @@ namespace AutoPostReport
 
                 if (cookie.Contains("MOD_AUTH_CAS"))
                 {
-                    this.Text = this.Text + "       登陆中 --- 请稍等";
+                    this.Text ="登陆中 --- 请稍等";
                 }
-
 
                 if (cookie.Contains("EMAP_LANG")&& cookie.Contains("zg_"))
                 {
