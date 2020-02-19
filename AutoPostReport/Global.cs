@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -62,6 +63,11 @@ namespace AutoPostReport
             if (JsonObj == null)
             {
                 JsonObj = new JObject(new JProperty("user", new JArray(NewAccount)));
+            }
+
+            if (JsonObj["user"] == null)
+            {
+                JsonObj.Last.AddAfterSelf(new JProperty("user", new JArray()));
             }
 
             var count = ((JContainer)JsonObj["user"]).Count;
@@ -172,6 +178,11 @@ namespace AutoPostReport
                 JsonObj = new JObject(new JProperty("user", new JArray()));
             }
             //获取账号数量
+
+            if (JsonObj["user"] == null)
+            {
+                JsonObj.Last.AddAfterSelf(new JProperty("user", new JArray()));
+            }
             var count = ((JContainer)JsonObj["user"]).Count;
 
             if (count > 0)
@@ -430,7 +441,17 @@ namespace AutoPostReport
         public static void ClearIECookie()
         {
             //清除IE临时文件
-            ShellExecute(IntPtr.Zero, "open", "rundll32.exe", " InetCpl.cpl,ClearMyTracksByProcess 2", "", 0);
+            // ShellExecute(IntPtr.Zero, "open", "rundll32.exe", " InetCpl.cpl,ClearMyTracksByProcess 255", "", 0);
+
+            Process process = new Process();
+            process.StartInfo.FileName = "RunDll32.exe";
+            process.StartInfo.Arguments = "InetCpl.cpl,ClearMyTracksByProcess 2";
+            process.StartInfo.UseShellExecute = false;        //关闭Shell的使用
+            process.StartInfo.RedirectStandardInput = true;   //重定向标准输入
+            process.StartInfo.RedirectStandardOutput = true;  //重定向标准输出
+            process.StartInfo.RedirectStandardError = true;   //重定向错误输出
+            process.StartInfo.CreateNoWindow = true;
+            process.Start();
         }
 
 

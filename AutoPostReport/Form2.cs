@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,15 +29,21 @@ namespace AutoPostReport
         {
             try
             {
-              
                 HtmlDocument document = webBrowser1.Document;
                 if (document != null)
                 {
                     document.Window.ScrollTo(100, 150);
                 }
                 var cookie = Global.GetCookieString(webBrowser1.Document.Url.ToString());
-                //Form1.MainForm.NutDebug(cookie);
-                if (cookie.Contains("EMAP_LANG"))
+                Debug.WriteLine(cookie);
+
+                if (cookie.Contains("MOD_AUTH_CAS"))
+                {
+                    this.Text = this.Text + "       登陆中 --- 请稍等";
+                }
+
+
+                if (cookie.Contains("EMAP_LANG")&& cookie.Contains("zg_"))
                 {
                     Form1.MainForm.NutDebug("登陆成功，开始获取账号信息");
                     var user =  Global.GetUserInfo(cookie);

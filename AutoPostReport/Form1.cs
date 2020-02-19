@@ -38,8 +38,7 @@ namespace AutoPostReport
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            Global.ClearIECookie();
-
+            //Global.ClearIECookie();
             if (loginform == null)
             {
                 loginform = new Form2();
@@ -84,9 +83,7 @@ namespace AutoPostReport
             }
             else
             {
-
                 RefreshTimer.Enabled = false;
-
                 button3.Text = "开始自动报平安";
                 NutDebug("挂机已经停止");
             }
@@ -115,10 +112,7 @@ namespace AutoPostReport
         public void TimerThreadInvoke()
         {
             TryRefreshTaskState();
-            //判断是否在工作时间内
-            TimeSpan nowDt = DateTime.Now.TimeOfDay;
-            TimeSpan workStartDT = DateTime.Parse("14:00").TimeOfDay;
-            TimeSpan workEndDT = DateTime.Parse("23:00").TimeOfDay;
+
             var count = Global.UserList.Count;
             if (count <= 0)
             {
@@ -126,11 +120,21 @@ namespace AutoPostReport
                 return;
             }
 
-            if (nowDt < workStartDT || nowDt > workEndDT) //判断是否在工作时间内
+            if (!checkBox1.Checked)
             {
-                Invoke(new Action(() => { NutDebug("未在14-20点内,一小时之后再次尝试"); }));
-                RefreshTimer.Interval = 3600000;
-                return;
+                //判断是否在工作时间内
+                TimeSpan nowDt = DateTime.Now.TimeOfDay;
+                TimeSpan workStartDT = DateTime.Parse("14:00").TimeOfDay;
+                TimeSpan workEndDT = DateTime.Parse("20:00").TimeOfDay;
+                if (nowDt < workStartDT || nowDt > workEndDT) //判断是否在工作时间内
+                {
+                    Invoke(new Action(() =>
+                    {
+                        NutDebug("未在14-20点内,一小时之后再次尝试");
+                        RefreshTimer.Interval = 3600000;
+                    }));
+                    return;
+                }
             }
 
             bool flag = false;
@@ -226,6 +230,7 @@ namespace AutoPostReport
         {
             try
             {
+                var name = user.Name;
                 user = Global.GetUserInfo(user.Cookie);//刷新一次账号信息
                 if (user.TodayTaskState == "未填报")
                 {
@@ -243,6 +248,7 @@ namespace AutoPostReport
                     return true;
 
                 }
+                user.Name= name;
                 AddToListView(user);
                 return false;
             }
@@ -319,14 +325,14 @@ namespace AutoPostReport
         /// </summary>
         public void CheckUpdate()
         {
-            String Version = "1.0";
+            String Version = "1.1";
             Form1.MainForm.Text = "四川师范大学自动报平安 v" + Version + " by CrazyNut [L.C.G]";
-            var serverVersion = NutWeb.Nut_Get("47.103.197.183/software/sicu/version", null);
+            var serverVersion = NutWeb.Nut_Get("47.103.197.183/software/sicnu/version", null);
             if (serverVersion != null)
             {
                 if (Version != serverVersion.Html)
                 {
-                    NutDebug("\r\n\r\n当前软件版本：" + Version + " 服务器最新版本:" + serverVersion.Html + " \r\n\r\n请到下方链接下载更新\r\n\r\nhttp://47.103.197.183/software/sicu/川师自动报平安.zip");
+                    NutDebug("\r\n\r\n当前软件版本：" + Version + " 服务器最新版本:" + serverVersion.Html + " \r\n\r\n请到下方链接下载更新\r\n\r\nhttp://47.103.197.183/software/sicnu/川师自动报平安.zip");
                 }
 
             }
@@ -369,8 +375,6 @@ namespace AutoPostReport
             TryRefreshTaskState();
             CheckUpdate();
         }
-
-
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -417,6 +421,11 @@ namespace AutoPostReport
             {
                 MessageBox.Show("未选中账号");
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

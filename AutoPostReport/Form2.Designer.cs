@@ -63,7 +63,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form2";
-            this.Text = "登陆窗口";
+            this.Text = "登陆窗口  --- 请输入账号密码登陆";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 

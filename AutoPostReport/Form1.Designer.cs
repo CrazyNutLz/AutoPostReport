@@ -46,6 +46,7 @@
             this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -135,7 +136,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(205, 139);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(439, 48);
+            this.button3.Size = new System.Drawing.Size(341, 48);
             this.button3.TabIndex = 10;
             this.button3.Text = "开始自动报平安";
             this.button3.UseVisualStyleBackColor = true;
@@ -145,7 +146,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(262, 123);
+            this.label5.Location = new System.Drawing.Point(224, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(293, 12);
             this.label5.TabIndex = 10;
@@ -197,11 +198,22 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(549, 156);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(96, 16);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "无视规定时间";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 418);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
@@ -214,6 +226,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "四川师范大学自动报平安 v0 by CrazyNut [L.C.G]";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -242,6 +255,7 @@
         private System.Windows.Forms.Timer RefreshTimer;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

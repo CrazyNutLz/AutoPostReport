@@ -18,3 +18,23 @@ E:\Vs Projects\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.csproj.C
 E:\Vs Projects\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.exe
 E:\Vs Projects\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.pdb
 E:\Vs Projects\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.csprojAssemblyReference.cache
+E:\AutoPostReport\AutoPostReport\bin\Release\AutoPostReport.exe.config
+E:\AutoPostReport\AutoPostReport\bin\Release\AutoPostReport.exe
+E:\AutoPostReport\AutoPostReport\bin\Release\AutoPostReport.pdb
+E:\AutoPostReport\AutoPostReport\bin\Release\HtmlAgilityPack.dll
+E:\AutoPostReport\AutoPostReport\bin\Release\HttpCodeLib.dll
+E:\AutoPostReport\AutoPostReport\bin\Release\Newtonsoft.Json.dll
+E:\AutoPostReport\AutoPostReport\bin\Release\HtmlAgilityPack.pdb
+E:\AutoPostReport\AutoPostReport\bin\Release\HtmlAgilityPack.xml
+E:\AutoPostReport\AutoPostReport\bin\Release\HttpCodeLib.pdb
+E:\AutoPostReport\AutoPostReport\bin\Release\Newtonsoft.Json.pdb
+E:\AutoPostReport\AutoPostReport\bin\Release\Newtonsoft.Json.xml
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.csprojAssemblyReference.cache
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.Form1.resources
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.Form2.resources
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.Properties.Resources.resources
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.csproj.GenerateResource.cache
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.csproj.CoreCompileInputs.cache
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.csproj.CopyComplete
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.exe
+E:\AutoPostReport\AutoPostReport\obj\Release\AutoPostReport.pdb
